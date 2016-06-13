@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+
+{% block title %}
+	Inventory
+{% endblock title %}
+
+{% block content %}
+	<h3>Itens in stock</h3>
+	{% for item in items %}
+		<li><a href="{% url 'item_detail' item.id %}">{{ item.title }}</a></li>
+	{% endfor %}
+{% endblock content %}
